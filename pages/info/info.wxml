@@ -1,0 +1,31 @@
+<view class="main">
+    <view class="info-area">
+      <view class="section">
+        <view class="flex-wrp" style="display: flex;flex-direction:row;">
+          <view class="flex-item">
+            <label class="info-title" style="display: flex;flex-direction:row;">手机：</label>
+          </view>
+          <view class="flex-item">
+            <input class="input" name="input_name" placeholder="请输入手机号码" type="number"  maxlength="11" bindinput='bindPhoneInput'/>
+          </view>
+        </view>
+      </view>
+
+      <view class="section">
+        <view class="flex-wrp" style="display: flex;flex-direction:row;">
+          <view class="flex-item">
+            <label class="info-title">验证码：</label>
+          </view>
+          <view class="row">
+            <input class="input" name="input_phone" placeholder="请输入验证码" type="number" maxlength="6"  bindinput='bindCodeInput'/>
+            <button class='codeBtn' bindtap='getCode' disabled='{{btnDisabled}}' > {{btnValue}}</button>
+          </view>
+        </view>
+      </view>
+    <view class="btn-area flex-wrp">
+      <button class="button" formType="submit" type="primary"  bindtap='save' >提交</button>
+    </view>
+
+</view>
+
+</view>

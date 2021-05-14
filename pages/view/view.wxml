@@ -1,0 +1,18 @@
+<import src="/util/list/index.wxml"></import>
+
+<view class="container">
+
+  <view class="userinfo">
+    <block wx:if="{{hasUserInfo}}" >
+      <image class="userinfo-avatar" src="{{avatarUrl}}" ></image>
+      <text class="userinfo-nickname">hello，{{nickName}}</text>
+    </block>
+    <view class="history">我的历史推送</view>
+  </view>
+ <view  wx:if="{{listArras==''}}">
+ <view class="weui-cells__title">您还没有符合定制的消息</view>
+</view>
+<template is="list" data="{{houseMess:houseMess,listArras:listArras,statusTip:statusTip,nLocation:nLocation}}"></template>
+<text class="data_status" wx:if="{{loadingStatus}}">{{dataStadus}}</text>
+</view>
+

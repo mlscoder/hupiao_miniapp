@@ -1,0 +1,37 @@
+<view class="detail_container">
+    <view class="{{fixed==0?'fixed':''}}">
+        <view class="detail-top">
+            <view bindtap="indexBack" class="index_back" wx:if="{{show_back}}">
+                <image src="../images/back_index.png"></image>
+            </view>
+            <view class="swiper_main">
+                <image class="defaultImg" wx:if="{{img.length==0}}"  mode="aspectFill" src="../images/mr.png"></image>
+                <image class="defaultImg" src="{{img[0].url}}" ></image>
+                <view >
+                    <text class="swiperPic_title" wx:if="{{img.length!=0}}">{{current+1}}/{{img.length}}
+                    </text>
+                    <swiper autoplay="{{img.length==1?false:true}}" bindchange="swiperSlide" circular="true" current="{{current}}" duration="{{duration}}" interval="{{interval}}">
+                       
+                        <swiper-item wx:if="{{img.length==0?false:true}}" wx:for="{{img}}" wx:key="{{index}}" wx:for-item="value">
+                            <image bindtap="bigPic" class="slide-image" data-index="{{index}}" mode="aspectFill" src="{{value.url}}"></image>
+                        </swiper-item>
+                    </swiper>
+                </view>
+            </view>
+        </view>
+      
+     <view class="title"> {{title}}</view>
+    <view class=""></view>
+     <view class="house-label"> 
+     <text class="text"> {{text}}</text>
+    </view>
+
+      <view class="weui-cells__title">  <text  selectable='true'>{{url}} </text></view>
+        <view class="weui-cells__title">{{msg}}</view>
+      <view class="weui-article">这是今天第{{count}}次(至多3次)推送,如需继续订阅消息，请<text class="next">点击订阅下次推送</text>，否则不在继续推送</view>
+    
+    </view>
+</view>
+   <view class="btn-area flex-wrp">
+         <button  class="button custom" bindtap="subscribeMessage">订阅下次推送</button>
+    </view>

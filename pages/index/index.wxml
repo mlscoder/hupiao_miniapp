@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="index">
+  <block>
+         <text class="weui-msg__desc"  style="color:red">首次使用请戳👇</text>
+         <button class="help" bindtap="help">使用指南</button>
+<!--   <button bindtap="subscribeMessage">提交订阅</button>-->
+<view class="title">{{title}}</view>
+    </block>
+</view>
+<form bindsubmit="submit">
+<view>
+   <view class="page-section">
+    <view class="weui-cells__title">出租类型	</view>
+    <radio-group  class="weui-cells__title" name="renttype">
+      <label><radio value="0"  checked="{{renttype==0}}" />不限</label>
+      <label><radio value="1" checked="{{renttype==1}}"/>合租</label>
+      <label><radio value="2" checked="{{renttype==2}}"/>整租</label>
+
+    </radio-group>
+      </view>
+  <view class="page-section">
+    <view class="weui-cells__title">付款类型</view>
+    <radio-group  class="weui-cells__title" name="pay">
+      <label><radio value="0" checked="{{pay==0}}"/>不限</label>
+      <label><radio value="1" checked="{{pay==1}}"/>押一付一</label>
+      <label><radio value="3" checked="{{pay==3}}"/>押一付三</label>
+
+    </radio-group>
+      </view>
+  <view class="page-section">
+    <view class="weui-cells__title">性别要求</view>
+    <radio-group   class="weui-cells__title" name="onlygril">
+      <label><radio weui-msg__title value="0" checked="{{onlygril==0}}" />忽略此条件</label>
+      <label><radio value="2" checked="{{onlygril==2}}" />男女不限</label>
+      <label><radio value="1" checked="{{onlygril==1}}" />仅限女生</label>
+    </radio-group>
+  </view>
+   <view class="page-section">
+    <view class="weui-cells__title">地铁站点</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input"  name="station" value="{{station}}"  placeholder="请输入地铁点名，如莘庄"/>
+      </view>
+    </view>
+  </view>
+
+  <view class="page-section">
+    <view class="weui-cells__title">价格上限</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="number"  name="price"   value="{{price}}" maxlength="5" placeholder="默认不设置" />
+      </view>
+    </view>
+  </view>
+    <view class="page-section">
+    <view class="weui-cells__title">发布次数</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="number" name="count"  maxlength="3" value="{{count}}" placeholder="默认不设置，推荐为6" />
+      </view>
+    </view>
+  </view>
+
+</view>
+<view class="index">
+
+<view>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 需要您授权使用 </button>
+    <block wx:else>
+      <view class="btn-area flex-wrp">
+         <button class="left" wx:if="{{hasUserInfo}}"  type="primary" formType="submit">提交定制</button>
+         <button  class="button custom" wx:if="{{hasUserInfo}}"  bindtap="subscribeMessage">开启订阅</button>
+    </view>
+    </block>
+  </view>
+</view>
+</form>

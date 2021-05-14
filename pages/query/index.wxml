@@ -1,0 +1,100 @@
+<import src="/util/list/index.wxml"></import>
+<view class="main_top">
+    <view class="main_top_search">
+        <text class="message" bindtap="message">{{message}}</text>
+        <image src="../images/click.png"></image>
+    </view>
+</view>
+
+<view class="banner">
+    <view class="filter-tab">
+        <view catchtap="setFilterPanel" class="{{showfilterindex==1?'active':''}}" data-findex="1">
+            <text class="{{showtext1==1?'active':''}}">{{area}}</text>
+            <image src="{{showfilterindex==1?'../images/xz.png':'../images/wxz.png'}}"></image>
+        </view>
+        <view catchtap="setFilterPanel" class="{{showfilterindex==2?'active':''}}" data-findex="2">
+            <text class="{{showtext2==1?'active':''}}">{{zu}}</text>
+            <image src="{{showfilterindex==2?'../images/xz.png':'../images/wxz.png'}}"></image>
+        </view>
+        <view catchtap="setFilterPanel" class="{{showfilterindex==3?'active':''}}" data-findex="3">
+            <text class="{{showtext3==1?'active':''}}">{{sort}}</text>
+            <image src="{{showfilterindex==3?'../images/xz.png':'../images/wxz.png'}}"></image>
+        </view>
+
+        <view catchtap="setFilterPanel" class="{{showfilterindex==4?'active':''}}" data-findex="4">
+            <text class="{{showtext4==1?'active':''}}">{{pay}}</text>
+            <image src="{{showfilterindex==4?'../images/xz.png':'../images/wxz.png'}}"></image>
+        </view>
+
+       <view catchtap="setFilterPanel" class="{{showfilterindex==5?'active':''}}" data-findex="5">
+            <text class="{{showtext5==1?'active':''}}">{{gril}}</text>
+            <image src="{{showfilterindex==5?'../images/xz.png':'../images/wxz.png'}}"></image>
+        </view>
+
+       <view catchtap="setFilterPanel" class="{{showfilterindex==6?'active':''}}" data-findex="6">
+            <text class="{{showtext6==1?'active':''}}">{{count}}</text>
+            <image src="{{showfilterindex==6?'../images/xz.png':'../images/wxz.png'}}"></image>
+        </view>
+
+    </view>
+    <view class="filter-content" wx:if="{{showfilter}}">
+        <view class="area-panel" wx:if="{{showfilterindex==1}}">
+            <view class="area-panel-left">
+                <text catchtap="Panelnone">不限</text>
+            
+                <text catchtap="setdtPanel" class="{{showareaindex==3?'cur':''}}">地铁</text>
+            </view>
+            <scroll-view class="area-panel-center" scrollY="true" wx:if="{{showarea}}">
+                <text catchtap="getPlate" class="{{index2==index?'active':''}}" data-index="{{index}}" data-mes="{{item.cname}}" data-mess="{{item.id}}" wx:if="{{showareaindex==2}}" wx:for="{{sqArray}}" wx:key="{{index}}">{{item.cname}}
+                    </text>
+                <text catchtap="getdtpanel" class="{{index22==index?'active':''}}" data-id="{{item.subwayline_id}}" data-index="{{index}}" data-mess="{{item.subwayline_name}}" wx:if="{{showareaindex==3}}" wx:for="{{dtArray}}" wx:key="{{index}}">{{item.subwayline_name}}
+                    </text>
+            </scroll-view>
+            <scroll-view class="area-panel-right" scrollY="true" wx:if="{{showarea}}">
+                <text catchtap="getPlate2" class="{{index4==-1?'active':''}}" data-mes="不限" wx:if="{{showareaindex2==2}}">不限
+                </text>
+                <text catchtap="getPlate2" class="{{index4==index?'active':''}}" data-id="{{item.id}}" data-index="{{index}}" data-mes="{{item.cname}}" wx:if="{{showareaindex2==2}}" wx:for="{{sqArray2}}" wx:key="{{index}}">{{item.cname}}
+                    </text>
+                <text catchtap="getdtpanel2" class="{{index5==-1?'active':''}}" data-mess="不限" wx:if="{{showareaindex2==3}}">不限
+                </text>
+                <text catchtap="getdtpanel2" class="{{index5==index?'active':''}}" data-id="{{item.id}}" data-index="{{index}}" data-mess="{{item.subway_name}}" wx:if="{{showareaindex2==3}}" wx:for="{{subwayState}}" wx:key="{{index}}">{{item.subway_name}}
+                    </text>
+            </scroll-view>
+            
+            <view class="area-panel-near" wx:if="{{showareaindex2==4}}">
+                <text catchtap="sortDistance" class="{{nearIndex==index?'active':''}}" data-id="{{item.id}}" data-index="{{index}}" data-item="{{item.content}}" wx:for="{{nearByArr}}" wx:key="{{index}}">{{item.content}}
+                    </text>
+            </view>
+        </view>
+        <view class="common-panel" wx:if="{{showfilterindex==2}}">
+            <text catchtap="priceSelect" class="{{index23==-1?'active':''}}" data-item="不限">不限</text>
+            <text catchtap="priceSelect" class="{{index23==index?'active':''}}" data-index="{{index}}" data-item="{{item}}" wx:for="{{price}}" wx:key="{{index}}">{{item}}
+                </text>
+        </view>
+
+        <view class="common-panel" wx:if="{{showfilterindex==3}}">
+            <text catchtap="sortSelect" class="{{index3==index?'active':''}}" data-index="{{item.id}}" data-item="{{item.content}}"  wx:for="{{renttype}}" wx:key="{{index}}">{{item.content}}
+                </text>
+        </view>
+
+        <view class="common-panel" wx:if="{{showfilterindex==4}}">
+            <text catchtap="paySelect" class="{{index4==index?'active':''}}" data-index="{{item.id}}" data-item="{{item.content}}"  wx:for="{{paytype}}" wx:key="{{index}}">{{item.content}}
+                </text>
+        </view>
+
+        <view class="common-panel" wx:if="{{showfilterindex==5}}">
+            <text catchtap="grilSelect" class="{{index5==index?'active':''}}" data-index="{{item.id}}" data-item="{{item.content}}"  wx:for="{{griltype}}" wx:key="{{index}}">{{item.content}}
+                </text>
+        </view>
+
+        <view class="common-panel" wx:if="{{showfilterindex==6}}">
+            <text catchtap="countSelect" class="{{index6==index?'active':''}}" data-index="{{item.id}}" data-item="{{item.content}}"  wx:for="{{counttype}}" wx:key="{{index}}">{{item.content}}
+                </text>
+        </view>
+
+    
+    </view>
+</view>
+<view catchtap="hideFilter" catchtouchmove="touchmove" class="filter-shadow" wx:if="{{showfilter}}"></view>
+<template is="list" data="{{houseMess:houseMess,listArras:listArras,statusTip:statusTip,nLocation:nLocation}}"></template>
+<text class="data_status" wx:if="{{loadingStatus}}">{{dataStadus}}</text>

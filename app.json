@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/query/index",
+    "pages/index/index",
+    "pages/view/view",
+    "pages/info/info",
+    "pages/confirm/confirm",
+    "pages/help/help",
+    "pages/result/detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "沪漂小窝",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#8a8a8a",
+    "selectedColor": "#1E90FF",
+    "list": [
+      {
+        "pagePath": "pages/query/index",
+        "text": "搜索查询",
+        "iconPath": "image/q1.png",
+        "selectedIconPath": "image/q2.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "信息定制",
+        "iconPath": "image/d1.png",
+        "selectedIconPath": "image/d2.png"
+      },
+      {
+        "pagePath": "pages/view/view",
+        "text": "我的小窝",
+        "iconPath": "image/m2.png",
+        "selectedIconPath": "image/m1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

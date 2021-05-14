@@ -1,0 +1,699 @@
+@import "../../lib/weui.wxss";
+page {
+    background: #fff;
+}
+
+.fixed {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.detail_container {
+    margin-bottom: 60rpx;
+}
+
+.title {
+    color: #2f2f2f;
+    font-size: 36rpx;
+    line-height: 50rpx;
+    display: block;
+    padding: 30rpx 30rpx 18rpx;
+    font-weight: bold;
+}
+
+.detail-top {
+    position: relative;
+}
+
+.swiper_main {
+    height: 400rpx;
+    position: relative;
+}
+
+.swiper_item {
+    position: relative;
+}
+
+.play_icon {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    width: 176rpx;
+    height: 176rpx;
+}
+
+.defaultImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 400rpx;
+    width: 100%;
+}
+
+.detail-top swiper {
+    width: 100%;
+    height: 400rpx!important;
+    overflow: hidden;
+    display: block;
+}
+
+.detail-top .slide-image {
+    display: block;
+    width: 100%;
+    height: 400rpx;
+}
+
+.house-title {
+    font-size: 36rpx;
+    line-height: 50rpx;
+    margin: 30rpx;
+    margin-bottom: 18rpx;
+    display: block;
+    color: #2f2f2f;
+    font-weight: bold;
+    width: 610rpx;
+}
+
+.house-mess {
+    margin-bottom: 14rpx;
+}
+
+.house-mess text {
+    position: relative;
+    display: inline-block;
+    color: #8D96A0;
+    font-size: 28rpx;
+    text-align: center;
+    padding: 0 30rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    letter-spacing: 0;
+}
+
+.house-mess text:after {
+    position: absolute;
+    content: '·';
+    display: block;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.house-mess text:last-child:after {
+    display: none;
+}
+
+.house-label {
+    margin: 0 0 30rpx 30rpx;
+}
+
+.house-label text {
+    display: inline-block;
+    margin-right: 20rpx;
+    line-height: 48rpx;
+    background: #f2f6fd;
+    text-align: left;
+    border-radius: 4rpx;
+    font-size: 26rpx;
+    color: #8D96A0;
+}
+
+.swiperPic_title {
+    font-size: 32rpx;
+    position: absolute;
+    bottom: 16rpx;
+    right: 16rpx;
+    z-index: 2;
+    width: 100rpx;
+    height: 52rpx;
+    line-height: 52rpx;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    border-radius: 4rpx;
+}
+
+.save image {
+    width: 44rpx;
+    height: 44rpx;
+}
+
+.share {
+    position: absolute;
+    top: 432rpx;
+    right: 32rpx;
+    width: 44rpx;
+    height: 44rpx;
+    padding: 0;
+    background-color: #fff;
+}
+
+.share image {
+    display: block;
+    width: 44rpx;
+    height: 44rpx;
+}
+
+.share:after {
+    border: none;
+}
+
+.agents {
+    margin-bottom: 30rpx;
+}
+
+.agents_list {
+    margin: 0 30rpx;
+    padding: 32rpx 0 24rpx;
+    display: flex;
+    align-items: center;
+}
+
+.agents_list .tx {
+    display: block;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-right: 32rpx;
+}
+
+.agents_list text {
+    font-size: 24rpx;
+    color: #8D96A0;
+    display: block;
+    line-height: 33rpx;
+    height: 33rpx;
+    margin-bottom: 16rpx;
+    white-space: nowrap;
+}
+
+.agents_list .agents_name .bto {
+    font-size: 34rpx;
+    color: #2F2F2F;
+    letter-spacing: 0;
+    margin-bottom: 0;
+    margin-right: 16rpx;
+    line-height: 1;
+}
+
+.agents_list .type {
+    background-image: linear-gradient(-90deg,#EDAF2F 0%,#F07503 100%);
+    border-radius: 4rpx;
+    width: 120rpx;
+    height: 40rpx;
+    font-size: 24rpx;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 40rpx;
+    text-align: center;
+}
+
+.agents_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.promise {
+    display: flex;
+    flex-direction: row;
+}
+
+.promise image {
+    display: block;
+    width: 44rpx;
+    height: 44rpx;
+    margin-top: 3rpx;
+}
+
+.promise text {
+    display: block;
+    font-size: 28rpx;
+    color: #bbb;
+    font-weight: normal;
+}
+
+.agents_name text:last-child,.agents_fprice text:last-child,.agents_hprice text:last-child {
+    font-size: 28rpx;
+    line-height: 28rpx;
+    color: #2f2f2f;
+    padding-top: 12rpx;
+}
+
+.agents_name text {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.agents_list .tel {
+    text-align: center;
+}
+
+.agents_list .tel .character {
+    font-size: 28rpx;
+    color: #8D96A0;
+    letter-spacing: 0;
+    display: block;
+}
+
+.agents_list .appoint .character {
+    font-size: 28rpx;
+}
+
+.agents_fprice .fwf {
+    display: flex;
+    flex-direction: row;
+}
+
+.agents_fprice .fwf image {
+    display: block;
+    width: 30rpx;
+    height: 30rpx;
+    margin-left: 2rpx;
+}
+
+.tel image,.appoint image {
+    width: 44rpx;
+    height: 44rpx;
+    vertical-align: middle;
+}
+
+.tel text,.appoint text {
+    text-align: center;
+    margin-bottom: 0;
+    color: #8D96A0;
+}
+
+.mess_detail {
+    margin: 0 30rpx 30rpx;
+    border-bottom: 1rpx solid #CECED2;
+}
+
+.mess_detail view {
+    display: flex;
+    height: 64rpx;
+    line-height: 64rpx;
+}
+
+.mess_detail view text {
+    font-size: 28rpx;
+    color: #8D96A0;
+    display: block;
+}
+
+.mess_detail view text:last-child {
+    flex: 1;
+    text-align: right;
+    color: #2f2f2f;
+}
+
+.estate_house {
+    display: flex;
+    flex-direction: row;
+    margin: 0 30rpx;
+    height: 88rpx;
+    color: #2f2f2f;
+    border-bottom: 1rpx solid #CECED2;
+}
+
+.estate_house text {
+    font-size: 28rpx;
+    line-height: 88rpx;
+    white-space: nowrap;
+    flex: 1;
+}
+
+.estate_house image {
+    display: block;
+    width: 44rpx;
+    height: 44rpx;
+    margin-top: 20rpx;
+}
+
+.location_text {
+    margin: 0 30rpx;
+}
+
+.location_text_list {
+    display: flex;
+    height: 64rpx;
+    line-height: 64rpx;
+    color: #2f2f2f;
+    font-size: 28rpx;
+}
+
+.location_text_list image {
+    display: block;
+    width: 44rpx;
+    height: 44rpx;
+    margin-top: 10rpx;
+}
+
+.location_text_list .location_left {
+    font-size: 28rpx;
+    color: #8D96A0;
+}
+
+.location_text_list .text-mess {
+    flex: 1;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 28rpx;
+}
+
+.allhouse {
+    display: block;
+    height: 72rpx;
+    line-height: 72rpx;
+    background: #f2f6fd;
+    border-radius: 36rpx;
+    text-align: center;
+    color: #2d3e4f;
+    font-size: 28rpx;
+    margin: 24rpx 30rpx 34rpx;
+}
+
+.fac_detail {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 30rpx;
+}
+
+.fac_detail .icon {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24rpx;
+    color: #8D96A0;
+    width: 114rpx;
+    height: 104rpx;
+    margin-bottom: 32rpx;
+}
+
+.fac_detail .icon image {
+    height: 64rpx;
+    width: 64rpx;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 16rpx;
+}
+
+.fac_detail .icon text {
+    display: block;
+    line-height: 24rpx;
+}
+
+.house_intro {
+    margin-bottom: 30rpx;
+}
+
+.house_intro text {
+    display: block;
+    margin: 0 30rpx;
+    color: #8D96A0;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+}
+
+.imgJt {
+    width: 100%;
+    height: 20rpx;
+    padding: 20rpx 0 10rpx;
+}
+
+.imgJt image {
+    width: 44rpx;
+    height: 20rpx;
+    display: block;
+    margin: 0 auto;
+}
+
+.priceList {
+    margin: 24rpx 32rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    background: #f2f6fd;
+    border-radius: 36rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: #2d3e4f;
+}
+
+.index_back {
+    position: absolute;
+    top: 20rpx;
+    left: 20rpx;
+    z-index: 999999;
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.index_back image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.rent {
+    margin: 0rpx 30rpx 12rpx;
+    justify-content: space-between;
+    display: flex;
+}
+
+.rent .down-icon {
+    width: 16rpx;
+    height: 16rpx;
+}
+
+.rent .per-rent {
+    font-size: 48rpx;
+    color: #FF8E20;
+}
+
+.rent .cost {
+    font-size: 28rpx;
+    color: #8D96A0;
+    letter-spacing: 0;
+    padding-right: 15rpx;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 120rpx;
+    background-color: #fff;
+    display: flex;
+    padding: 0 32rpx 0 40rpx;
+    box-sizing: border-box;
+}
+
+.a-house-title {
+    color: #8D96A0;
+}
+
+.rent .a-per-rent {
+    font-size: 40rpx;
+    color: #C9CDD2;
+}
+
+.per-box {
+    position: relative;
+}
+
+.per-box .a-rent {
+    position: absolute;
+    width: 400rpx;
+    right: -390rpx;
+    top: 8rpx;
+    font-size: 28rpx;
+    color: #8D96A0;
+}
+
+.footer image {
+    width: 44rpx;
+    height: 44rpx;
+    margin-top: 28rpx;
+    vertical-align: inherit;
+    position: relative;
+    left: 3rpx;
+}
+
+.footer .btn {
+    background: #4FCBFF;
+    box-shadow: 0 4rpx 7rpx 0 rgba(8,18,63,0.08);
+    border-radius: 100rpx;
+    padding: 0;
+    font-size: 34rpx;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    margin-top: 20rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: inline-block;
+    width: 100%;
+}
+
+.footer .save,.footer .appoint {
+    font-size: 24rpx;
+    color: #8D96A0;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 24rpx;
+    display: block;
+}
+
+.footer .text {
+}
+
+.footer .save,.footer .appoint {
+    margin-right: 60rpx;
+}
+
+.footer .call {
+    flex: 3;
+}
+
+.appoint-tel {
+    flex: 2;
+    text-align: right;
+}
+
+.appoint-tel .appoint {
+    text-align: center;
+}
+
+.tel-appoint {
+    display: flex;
+    flex: 3;
+}
+
+.appoint-tel .appoint,.appoint-tel .tel {
+    display: inline-block;
+}
+
+.appoint-tel text {
+    margin-top: 10rpx;
+}
+
+.appoint-tel .tel {
+    padding-left: 45rpx;
+}
+
+.map {
+    height: 320rpx;
+    width: 100%;
+}
+
+.mask-view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1,1,1,0.5);
+}
+
+.mask-view image {
+    width: 216rpx;
+    height: 216rpx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.nearby {
+}
+
+.nearby_house {
+    white-space: nowrap;
+    padding: 0 0 0 30rpx;
+    box-sizing: border-box;
+}
+
+.houseList {
+    width: 240rpx;
+    display: inline-block;
+    margin-right: 16rpx;
+}
+
+.houseList:last-child {
+    margin-right: 0rpx;
+}
+
+.houseList .pic {
+    position: relative;
+    height: 240rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.houseList image {
+    width: 240rpx;
+    height: 240rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.price .name {
+    font-size: 28rpx;
+    color: #2C3236;
+    letter-spacing: 0;
+    padding-top: 10rpx;
+}
+
+.price .name text {
+    display: inline-block;
+    max-width: 120rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: sub;
+}
+
+.price .money {
+    font-size: 34rpx;
+    color: #FF8E20;
+    letter-spacing: 0;
+    line-height: 34rpx;
+    padding-top: 10rpx;
+}
+
+.fix-iphonex-button {
+    bottom: 67rpx!important;
+}
+
+.fix-iphonex-button::after {
+    content: ' ';
+    position: fixed;
+    bottom: 0!important;
+    height: 69rpx!important;
+    width: 100vw;
+    left: 0;
+    background: #fff;
+}
+
+.btn1 {
+    width: 70%;
+    font-size: 30rpx;
+    margin-top: 20rpx;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border-radius: 98rpx; 
+  }
+  

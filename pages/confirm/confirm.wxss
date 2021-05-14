@@ -1,0 +1,26 @@
+@import "../../lib/weui.wxss";
+@import "../result/detail.wxss";
+.btn-area {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.btn-area .button {
+  width: 180px;
+}
+.btn-area .button.custom {
+  background-color: #0377e4;
+  border-color: #0377e4;  
+}
+.button {
+  border: 1px solid #4cae4c;
+  background-color: #5cb85c;
+  font-size: 15px;
+  color: #FFF;
+}
+.next{
+  color:red
+}
+.detail_container {
+    margin-bottom: 100rpx;
+}

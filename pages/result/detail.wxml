@@ -1,0 +1,36 @@
+<view class="detail_container">
+  <view class="{{fixed==0?'fixed':''}}">
+    <view class="detail-top">
+      <view bindtap="indexBack" class="index_back" wx:if="{{show_back}}">
+        <image src="../images/back_index.png"></image>
+      </view>
+      <view class="swiper_main">
+        <image class="defaultImg" wx:if="{{img.length==0}}" mode="aspectFill" src="../images/mr.png"></image>
+        <image class="defaultImg" src="{{img[0].url}}"></image>
+        <view>
+          <text class="swiperPic_title" wx:if="{{img.length!=0}}">{{current+1}}/{{img.length}}
+                    </text>
+          <swiper autoplay="{{img.length==1?false:true}}" bindchange="swiperSlide" circular="true" current="{{current}}" duration="{{duration}}" interval="{{interval}}">
+
+            <swiper-item wx:if="{{img.length==0?false:true}}" wx:for="{{img}}" wx:key="{{index}}" wx:for-item="value">
+              <image bindtap="bigPic" class="slide-image" data-index="{{index}}" mode="aspectFill" src="{{value.url}}"></image>
+            </swiper-item>
+          </swiper>
+        </view>
+      </view>
+    </view>
+
+    <view class="title"> {{title}}</view>
+    <view class=""></view>
+    <view class="house-label">
+      <text class="text"> {{text}}</text>
+    </view>
+
+    <view class="weui-article">{{msg}}</view>
+
+
+<button class="btn1"  bindtap='copy' data-copy='{{url}}'>点击复制原文链接</button>
+
+
+  </view>
+</view>
