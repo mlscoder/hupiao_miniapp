@@ -1,9 +1,9 @@
-   const basePath = 'https://api.adong.fun';
-//const basePath = 'http://localhost';
+  const basePath = 'https://api.adong.fun';
+// const basePath = 'http://localhost';
 
 const urlList = {
   //地铁线路配置获取连接 后期转移到本地
-  config:'https://m.hizhu.com/houseselect.html', 
+  config: basePath + '/wxapp/subway',//
   
   // refreshTokeUrl: basePath + '/refreshToke',//token
   // 登录获取保存用户信息
@@ -18,6 +18,7 @@ const urlList = {
   getnotice: basePath + '/wxapp/getnotice',
   querylist: basePath + '/wxapp/query',
   queryone: basePath + '/wxapp/queryone',
-  message: basePath + '/wxapp/message'
+  message: basePath + '/wxapp/message',
+  city: basePath + '/wxapp/city' ,//城市代码和名称配置
 }
 module.exports = urlList;

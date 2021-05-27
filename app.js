@@ -7,7 +7,7 @@ App({
     userInfo: null,
     hasuserInfo:false,
     version: "2.6",
-    cityCode:'001009001'
+    cityCode:'sh'
   },
   onLaunch: function () {
     // 登录
@@ -71,15 +71,18 @@ App({
       }
     })
     this.getSelectData();
+    this.getCityData();
   }, 
   getSelectData: function (t) {
-    t ='001009001'
-    var e = this;
+    console.log(wx.getStorageSync("cityCode"))
+   t= wx.getStorageSync("cityCode") ? wx.getStorageSync('cityCode'):"sh"
+    console.log(t)
+   var e = this;
     return new Promise(function (o, n) {
       wx.request({
         url: urlList.config,
         data: {
-          city_code: t
+          cityCode: t
         },
         success: function (n) {
           wx.setStorageSync("select" + t + e.globalData.version, n), o(n);
@@ -88,7 +91,10 @@ App({
     });
   },
  
-
-
-
+  getCityData: function (t) {
+    if(wx.getStorageSync('cityCode')==null){
+      wx.setStorageSync('cityCode','sh')
+      wx.setStorageSync('cityName','上海')
+    }
+   }
 })

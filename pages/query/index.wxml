@@ -1,8 +1,21 @@
 <import src="/util/list/index.wxml"></import>
 <view class="main_top">
+ <view bindtap="cityChange" class="main_top_city">
+        <text>{{cityName}}</text>
+        <image class="city_icon" src="../images/jt.png"></image>
+    </view>
     <view class="main_top_search">
         <text class="message" bindtap="message">{{message}}</text>
         <image src="../images/click.png"></image>
+    </view>
+</view>
+
+<view catchtap="cityBoxHide" catchtouchmove="touchmove" class="city_box" wx:if="{{city_box}}">
+
+    <view class="city_sj"></view>
+    <view class="city_select">
+        <text bindtap="citySelect" class="{{item.code==cityCode?'cur':''}}" data-city="{{item.name}}" data-code="{{item.code}}"  wx:for="{{cityArra}}" wx:key="{{index}}">{{item.name}}
+            </text>
     </view>
 </view>
 
@@ -47,7 +60,7 @@
             <scroll-view class="area-panel-center" scrollY="true" wx:if="{{showarea}}">
                 <text catchtap="getPlate" class="{{index2==index?'active':''}}" data-index="{{index}}" data-mes="{{item.cname}}" data-mess="{{item.id}}" wx:if="{{showareaindex==2}}" wx:for="{{sqArray}}" wx:key="{{index}}">{{item.cname}}
                     </text>
-                <text catchtap="getdtpanel" class="{{index22==index?'active':''}}" data-id="{{item.subwayline_id}}" data-index="{{index}}" data-mess="{{item.subwayline_name}}" wx:if="{{showareaindex==3}}" wx:for="{{dtArray}}" wx:key="{{index}}">{{item.subwayline_name}}
+                <text catchtap="getdtpanel" class="{{index22==index?'active':''}}" data-id="{{item.subwayLineId}}" data-index="{{index}}" data-mess="{{item.subwaylineName}}" wx:if="{{showareaindex==3}}" wx:for="{{dtArray}}" wx:key="{{index}}">{{item.subwayLineName}}
                     </text>
             </scroll-view>
             <scroll-view class="area-panel-right" scrollY="true" wx:if="{{showarea}}">
@@ -57,7 +70,7 @@
                     </text>
                 <text catchtap="getdtpanel2" class="{{index5==-1?'active':''}}" data-mess="不限" wx:if="{{showareaindex2==3}}">不限
                 </text>
-                <text catchtap="getdtpanel2" class="{{index5==index?'active':''}}" data-id="{{item.id}}" data-index="{{index}}" data-mess="{{item.subway_name}}" wx:if="{{showareaindex2==3}}" wx:for="{{subwayState}}" wx:key="{{index}}">{{item.subway_name}}
+                <text catchtap="getdtpanel2" class="{{index5==index?'active':''}}" data-id="{{item.id}}" data-index="{{index}}" data-mess="{{item.subwayName}}" wx:if="{{showareaindex2==3}}" wx:for="{{subwayState}}" wx:key="{{index}}">{{item.subwayName}}
                     </text>
             </scroll-view>
             
