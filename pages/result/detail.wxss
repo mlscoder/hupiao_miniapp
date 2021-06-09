@@ -558,8 +558,6 @@ page {
     display: block;
 }
 
-.footer .text {
-}
 
 .footer .save,.footer .appoint {
     margin-right: 60rpx;
@@ -616,8 +614,7 @@ page {
     transform: translate(-50%,-50%);
 }
 
-.nearby {
-}
+
 
 .nearby_house {
     white-space: nowrap;
@@ -696,4 +693,8 @@ page {
     color: white;
     border-radius: 98rpx; 
   }
-  
+  .message {
+    padding: 20px 15px;
+    font-size: 10px;
+    color:#ddd;
+  }

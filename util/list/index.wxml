@@ -40,17 +40,13 @@
         </view>
         <block wx:if="{{statusTip}}">
             <view class="noMore" wx:if="{{houseMess==2&&listArras.length}}">
-                <text>已加载所有房源</text>
+                <text>已加载所有信息</text>
             </view>
             <view class="noHouse" wx:if="{{houseMess<=0}}">
                 <view wx:if="{{nLocation==0}}">
                     <image src="../images/no_mess.png"></image>
-                    <text class="no-mess-title" wx:if="{{comfrom=='save'}}">还没有收藏的房源</text>
-                    <text class="no-mess-title" wx:else>没有找到符合条件的房源</text>
-                </view>
-                <view bindtap="locationRefresh" wx:if="{{nLocation==1}}">
-                    <image src="../images/n-location.png"></image>
-                    <text class="no-mess-title">已开启定位？点击刷新试试</text>
+                    <text class="no-mess-title" wx:if="{{comfrom=='save'}}">还没有收藏的信息</text>
+                    <text class="no-mess-title" wx:else>没有找到符合条件的信息</text>
                 </view>
             </view>
         </block>

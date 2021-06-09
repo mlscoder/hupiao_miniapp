@@ -150,7 +150,7 @@ Page(t({}, a.default.listOp, {
 
     getTitle: function () {
         var that = this
-      
+
         wx.request({
             url: urlList.message,
             success(res) {
@@ -231,23 +231,20 @@ Page(t({}, a.default.listOp, {
             distance: "0",
             nLocation: 0,
             showareaindex2: 0
-        })), e.set_city(), e.getTitle(),e.getHouseData());
+        })), e.set_city(), e.getTitle(), e.getHouseData());
     },
     set_city: function () {
         var t = this;
         wx.setStorageSync("cityCode", t.data.cityCode), wx.setStorageSync("cityName", t.data.cityName),
             e.globalData.city_code = wx.getStorageSync("cityCode"), e.globalData.city_name = wx.getStorageSync("cityName");
     },
-
     message: function () {
-        var that = this;
-
         wx.navigateTo({
-            url: '../weixinlink/weixinlink'
-
+          url: '../weixinlink/weixinlink'
         })
+      },
 
-    },
+
     getHouseData: function () {
         var t = this;
         t.data.pageNo++;
@@ -851,7 +848,7 @@ Page(t({}, a.default.listOp, {
     },
     onShareAppMessage: function () {
         return {
-            title: "沪漂小窝-租房信息查询定制小站",
+            title: "租房搜索助手—快捷租房找房神器",
             desc: "一个租房信息查询整合工具！",
             path: "/pages/query/index"
         };

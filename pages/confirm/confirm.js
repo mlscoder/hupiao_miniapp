@@ -8,8 +8,6 @@ function a(a, t, e) {
 }
 const urlList = require('../../config.js')
 
-var t, e, o = require("../../qqmap-wx-jssdk.min.js"), n = getApp();
-
 Page({
   data: {
     indicatorDots: !0,
@@ -34,13 +32,14 @@ Page({
     text: '',
     url: '',
     msg: 'tips:可点击图片查看大图，复制url到浏览器查看原文哟',
-   
-    count:''
+    count: '',
+    message:'免责声明：信息来源于互联网公开信息，本工具不对真实性和时效性负责，若侵犯您的权益，请联系客服删除'
+
   },
   onLoad: function (a) {
-     this.setData({
-       count: a.count
-     })
+    this.setData({
+      count: a.count
+    })
 
     wx.showToast({
       title: "加载中...",
@@ -55,9 +54,9 @@ Page({
       },
       success: function (a) {
         console.log(a.data.data)
-        that.setData({ 
+        that.setData({
           img: a.data.data.image_urls,
-          title: a.data.data.title,
+          title: a.data.data.houseinfo.title,
           url: a.data.data.url,
           text: a.data.data.houseinfo.text,
         })
@@ -65,14 +64,22 @@ Page({
       }
     });
   },
-
-
-  swiperSlide: function (a) {
-    this.setData({
-      current: a.detail.current
-    }), e = a.detail.current;
+  copy: function (e) {
+    var code = e.currentTarget.dataset.copy;
+    wx.setClipboardData({
+      data: code,
+      success: function (res) {
+        wx.showToast({
+          title: '复制成功',
+        });
+      },
+      fail: function (res) {
+        wx.showToast({
+          title: '复制失败',
+        });
+      }
+    })
   },
-
 
   bigPic: function (a) {
 
@@ -92,7 +99,7 @@ Page({
   },
   subscribeMessage: function () {
     wx.requestSubscribeMessage({
-      tmplIds: ['GekdKD-1b4tLPioWpDEbubE-Ml_NiakJ1uVy7KQylhI'],
+      tmplIds: ['CyDG40S2wfX-i8rVPbQxmD8C3Tcr0dYQwUqOcDV0Wcw'],
       success(res) {
         console.log('订阅消息结果！')
         console.log(res)

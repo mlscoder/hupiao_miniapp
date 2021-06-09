@@ -33,7 +33,8 @@ Page({
         title:'',
       text:'',
       url:'',
-      msg:'tips:可点击图片查看大图，复制链接到浏览器查看原文哟'
+      msg:'tips:可点击图片查看大图，复制链接到浏览器查看原文哟',
+      message:'免责声明：信息来源于互联网公开信息，本工具不对真实性和时效性负责，若侵犯您的权益，请联系客服删除'
     },
     onLoad: function(a) {
       console.log(a.rentid)

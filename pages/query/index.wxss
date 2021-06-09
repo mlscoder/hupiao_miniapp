@@ -52,7 +52,7 @@
 
 .main_top_search text {
     font-size: 30rpx;
-    color: #9C9C9D;
+    color: #888;
     line-height: 56rpx;
 }
 
@@ -396,3 +396,4 @@
     width: 100%;
     border-bottom: 1rpx solid #ddd;
 }
+

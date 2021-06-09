@@ -3,8 +3,103 @@
 .page-section{
   margin-bottom: 20rpx;
 }
+.main_top {
+  height: 88rpx;
+  display: flex;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+}
 
+.main_top_city {
+  padding: 16rpx 15rpx;
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+}
 
+.main_top_city .city_icon {
+  display: block;
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 16rpx;
+  margin-top: 16rpx;
+}
+
+.main_top_city text {
+  color: #888;
+  font-size: 28rpx;
+  line-height: 56rpx;
+}
+
+.main_top_search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: 56rpx;
+  border-radius: 6rpx;
+  background: #f2f6fd;
+  margin: 16rpx 18rpx 16rpx 18rpx;
+}
+
+.main_top_search image {
+  display: block;
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 12rpx;
+  margin-top: 15rpx;
+}
+
+.main_top_search text {
+  font-size: 30rpx;
+  color:#888;
+  line-height: 56rpx;
+}
+
+.city_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 22;
+}
+
+.city_sj {
+  position: absolute;
+  top: 57rpx;
+  left: 45rpx;
+  border: 14rpx;
+  border-style: dashed dashed solid dashed;
+  border-color: transparent transparent #fff transparent;
+  z-index: 3;
+}
+
+.city_select {
+  position: absolute;
+  top: 82rpx;
+  left: 13rpx;
+  background: #fff;
+  width: 200rpx;
+  border-radius: 6rpx;
+}
+
+.city_select text {
+  display: block;
+  width: 200rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: #2f2f2f;
+  line-height: 88rpx;
+  height: 88rpx;
+}
+
+.city_select text.cur {
+  color: #4fcbff;
+}
 
 /**index.wxss**/
 .userinfo {
@@ -50,9 +145,14 @@
   color: #FFF;
 }
 .btn-area .button.custom {
-  left: 15px;
   background-color: #0377e4;
   border-color: #0377e4;
+}
+
+.btn-area .button.query {
+  left: 15px;
+  background-color: #4fcbff;
+  border-color: #4fcbff;
 }
 .help{
   background-color: #e48c09;

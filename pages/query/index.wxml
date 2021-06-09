@@ -5,7 +5,7 @@
         <image class="city_icon" src="../images/jt.png"></image>
     </view>
     <view class="main_top_search">
-        <text class="message" bindtap="message">{{message}}</text>
+        <text  bindtap="message">{{message}}</text>
         <image src="../images/click.png"></image>
     </view>
 </view>

@@ -4,8 +4,8 @@
 
   <view class="userinfo">
     <block wx:if="{{hasUserInfo}}" >
-      <image class="userinfo-avatar" src="{{avatarUrl}}" ></image>
-      <text class="userinfo-nickname">hello，{{nickName}}</text>
+       <open-data  class="userinfo-avatar" type="userAvatarUrl"></open-data>
+      <open-data  class="userinfo-nickname"  type="userNickName"></open-data>
     </block>
     <view class="history">我的历史推送</view>
   </view>

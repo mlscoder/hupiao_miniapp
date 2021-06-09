@@ -29,9 +29,11 @@
       <view class="weui-cells__title">  <text  selectable='true'>{{url}} </text></view>
         <view class="weui-cells__title">{{msg}}</view>
       <view class="weui-article">这是今天第{{count}}次(至多3次)推送,如需继续订阅消息，请<text class="next">点击订阅下次推送</text>，否则不在继续推送</view>
-    
+      <button class="btn1"  bindtap='copy' data-copy='{{url}}'>点击复制原文链接</button>
     </view>
 </view>
    <view class="btn-area flex-wrp">
          <button  class="button custom" bindtap="subscribeMessage">订阅下次推送</button>
     </view>
+    <view class="message">{{message}}</view>
+

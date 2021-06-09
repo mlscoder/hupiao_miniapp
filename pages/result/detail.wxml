@@ -27,10 +27,11 @@
     </view>
 
     <view class="weui-article">{{msg}}</view>
-
+    
 
 <button class="btn1"  bindtap='copy' data-copy='{{url}}'>点击复制原文链接</button>
 
 
   </view>
+  <view class="message">{{message}}</view>
 </view>

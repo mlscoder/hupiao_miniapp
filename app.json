@@ -11,7 +11,7 @@
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "沪漂小窝",
+    "navigationBarTitleText": "租房搜索助手",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light"
   },
@@ -28,13 +28,13 @@
       },
       {
         "pagePath": "pages/index/index",
-        "text": "信息定制",
+        "text": "条件设定",
         "iconPath": "image/d1.png",
         "selectedIconPath": "image/d2.png"
       },
       {
         "pagePath": "pages/view/view",
-        "text": "我的小窝",
+        "text": "我的消息",
         "iconPath": "image/m2.png",
         "selectedIconPath": "image/m1.png"
       }
@@ -42,3 +42,4 @@
   },
   "sitemapLocation": "sitemap.json"
 }
+
